@@ -1,6 +1,15 @@
- > As you complete each section you **must** remove the prompt text. Every *turnin* of this project includes points for formatting of this README so keep it clean and keep it up to date. 
- > Prompt text is any lines beginning with "\>"
- > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets). 
+ ># CS100-Project-
+Title: Task Scheduler
+
+Group Members:
+Ian Lamb - @Rancho-Relaxo
+Andre Garcia - @OnDress
+Harjyot Sidhu - @hsidhu6
+Aryan Obrai - @Ares278
+
+Description:
+For this group project we will be making a task scheduler. 
+The reason we chose to create this for our project is because as college students, time management is one of the key skills to have to succeed in college. You need to be able to see the week ahead and see what assignments are due on what dates and sometimes it takes a lot of planning to do well in a lot of courses. We plan on using C++ as our primary coding language and we haven't yet decided what outside technologies will be implemented or utilized. Our project will be able to create tasks that have a title, description, classification, priority, duration, and due date. It will also be able to create and manage task lists with more than one task. The task lists will also be able to represent larger tasks which have substacked included. The user will be able to do or undo any of these operations and utilize any of these features with some of them being optional as well.
 # Task Scheduler
  > Your author list below should include links to all members GitHub (remove existing author).
  
