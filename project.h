@@ -3,21 +3,10 @@
 #include "task.h"
 using namespace std;
 
-class Project{
+class Project: public Task{
    private:
-      string ProjectName;
-      string description;
-      int priority;
-      int classification;
-      int dueTime;
       vector<Task> subTasks;
    public:
-      Project();
-      void display();
-      void addTask();
-      void deleteTask();
-      void CreateTask();
-
-
+      Project(string name, string description, int priority, string classification, int due time);
 }
 #endif

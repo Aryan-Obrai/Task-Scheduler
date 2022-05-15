@@ -3,14 +3,14 @@
 using namespace std;
 
 class Task{
-   private:
+   protected:
       string taskName;
       string description;
       int priority;
-      int classification;
+      string classification;
       int dueTime;
    public:
-      Task();
+      Task(string name, string description, int priority, string classification, int due time);
       void display();
       CreateTask();   
 
