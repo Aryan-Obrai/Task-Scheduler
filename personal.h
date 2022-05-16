@@ -10,6 +10,7 @@ class Personal: public Task  {
       string classification = "Personal";
       string goal;
    public:
+      Personal()
       void printTask();
       void setGoal(string );
       string getGoal();
