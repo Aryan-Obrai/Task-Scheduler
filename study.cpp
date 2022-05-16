@@ -1,7 +1,16 @@
 #include "study.h"
 
 using namespace std;
+Study::Study(){
+    taskName = "Untitled";
+    description = "N/A";
+    priority = 0;
+    classification = "Study";
+    dueTime = "01-01-2000, 12:00 AM"
+    complete = false;
 
+    className = "N/A";
+}
 void Study::printTask(){
 cout << "Task Name: " << getName() << endl;
 cout << "Description: " << getDesc() << endl;
