@@ -1,16 +1,19 @@
 #ifndef __TASKLIST_H__
 #define __TASKLIST_H__
+
 #include "task.h"
-#include "project.h"
+
 using namespace std;
 
-class TaskList{
+class TaskList {
    private:
-      vector<Task> Tasks;
+      vector<Task> subTasks;
+      bool allComplete;
    public:
-      void display();
-      void addTask();
-      void deleteTask();
-}
+      void printSubTasks();
+      void setClass(char );
+      void addSubTask(Task*);
+      void deleteSubTask(Task*);
+};
 
 #endif
