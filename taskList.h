@@ -11,7 +11,7 @@ class TaskList {
       bool allComplete;
    public:
       void printSubTasks();
-      void setClass(char );
+      void setClass(Task* , char );
       void addSubTask(Task*);
       void deleteSubTask(Task*);
 };
