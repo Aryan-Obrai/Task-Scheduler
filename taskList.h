@@ -2,6 +2,9 @@
 #define __TASKLIST_H__
 
 #include "task.h"
+#include "work.h"
+#include "study.h"
+#include "personal.h"
 
 using namespace std;
 
