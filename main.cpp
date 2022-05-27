@@ -174,16 +174,16 @@ int main(int argc, char* argv[]) {
             
             if (choice == '6') {
                 //complete later when implemented
-                            }
+            }
                 
-                                        if (choice == '7') {
-                                                        s.undo();
-                                                                    }
-                                                                            }
-                
-                                                                                    if (choice == '5') {
-                                                                                                delete tmp;
-                                                                                                            break;
-                                                                                                                    }
-                                                                                                                        }
-                                                                                                                        }
+            if (choice == '7') {
+                s.undo();
+                }
+            }
+
+            if (choice == '5') {
+                delete tmp;
+                break;
+            }
+        }
+    }
