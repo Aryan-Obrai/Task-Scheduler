@@ -4,11 +4,8 @@
 #include <string>
 #include <vector>
 
-<<<<<<< HEAD
-=======
 using namespace std;
 
->>>>>>> 511e3e936cbb5215603dea9421e80c5eff65c3fb
 Scheduler::Scheduler() {
     sortType = N;
     vector<Task> fullList;
@@ -66,7 +63,7 @@ void Scheduler::removeTask(Task* task) {
 }
 
 void Scheduler::sortTasks(char sort) {
-	sort(fullList.begin(), fullList.end(), [](Task* l, Task* r){
+	sort(fullList.begin(), fullList.end(), [](Task* l, Task* r) {
 		return l->getPriority() < r->getPriority();	
 	});
 }
