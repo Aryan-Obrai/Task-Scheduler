@@ -50,16 +50,22 @@ void Scheduler::display() {
 }
 
 void Scheduler::addTask(Task* task) {
-
+	fullList.push_back(task);	
 }
 
 
 void Scheduler::removeTask(Task* task) {
-
+	for(int i = 0; i < fullList.size(); i++){
+		if(task.getName() == fullList.at(i).getName()){
+			fullList.erase(i);
+		}
+	}	
 }
 
 void Scheduler::sortTasks(char sort) {
-
+	sort(fullList.begin(), fullList.end(), [](Task* l, Task* r) {
+		return l->getPriority() < r->getPriority();	
+	});
 }
 
 void Scheduler::editDesc(Task* task, string newDesc) {
@@ -97,5 +103,5 @@ void Scheduler::sort() {
 }
 
 void Scheduler::undo() {
-
+	fullList.pop_back();
 }
