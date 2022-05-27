@@ -37,12 +37,14 @@ void TaskList::printTask() {
          << "List Complete: " << (allComplete ? "True" : "False") << endl;
 }
 
-void TaskList::printSubTasks() {
+void TaskList::printSubTasks(){
+for (int i = 0; i < subTasks.length; i++){
+cout << (i + 1) << " " << "." << subTasks[i] << subTasks[i] -> getName() << endl;
 
 }
 
-void TaskList::setClass(Task* oldTask, char class) {
-    
+void TaskList::setClass(Task* oldTask, string clas ) {
+oldTask -> classification = clas;    
 }
 
 void TaskList::addSubTask(Task* _Task) {
@@ -50,5 +52,12 @@ void TaskList::addSubTask(Task* _Task) {
 }
 
 void TaskList::deleteSubTask(Task* _Task) {
-    
+ for ( int i = 0, i < subTasks.length; i++){
+	if (_Task == subTasks[i]){
+		delete _Task;
+	 subTask.erase(subTask.begin() + i);
+	break;	
+	}
+}   
+	
 }
