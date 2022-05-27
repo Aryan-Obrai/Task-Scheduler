@@ -4,6 +4,11 @@
 #include <string>
 #include <vector>
 
+<<<<<<< HEAD
+=======
+using namespace std;
+
+>>>>>>> 511e3e936cbb5215603dea9421e80c5eff65c3fb
 Scheduler::Scheduler() {
     sortType = N;
     vector<Task> fullList;
