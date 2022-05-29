@@ -12,7 +12,7 @@ class Study: public Task  {
       vector<string> resources;
       vector<string> notes;
    public:
-      Study()
+      Study();
       void printTask();
       void printResources();
       void printNotes();

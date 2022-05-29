@@ -1,4 +1,3 @@
-#include "../header/task.h"
 #include "../header/work.h"
 #include <iostream>
 

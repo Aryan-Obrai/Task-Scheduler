@@ -15,7 +15,8 @@ class Task {
       string dueTime;
       bool complete;
    public:
-      Task(string name, string description, int priority, int dueTime);
+      Task();
+      Task(string , string , int , string , string );
       virtual void printTask() = 0;
       void setName(string );
       string getName();

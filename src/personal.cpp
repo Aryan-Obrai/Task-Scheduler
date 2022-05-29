@@ -1,29 +1,27 @@
 #include "../header/personal.h"
 
-using namespace std
+using namespace std;
 
-Personal::Personal(){
-    taskName = "Untitled";
-    description = "N/A";
-    priority = 0;
-    classification = "Study";
-    dueTime = "01-01-2000, 12:00 AM"
-    complete = false;
-    goal = "N/A"
+Personal::Personal() {}
+
+Personal::Personal(string name, string desc, int prio, string dueDate, string dueClock, string goal) : Task(name, desc, prio, dueDate, dueClock) {
+    this->goal = goal;
 }
+
 void Personal::printTask(){
-cout << "Task Name: " << getName() << endl;
-cout << "Description: " << getDesc() << endl;
-cout << "Goal: " << getGoal() << endl;
-cout << "Priority: " << getPriority() << endl;
-cout << "Classification: " << getClass() << endl;
-cout << "Due on: " << getDue() << endl;
-cout << "Complete: " << (getComp() ? "True" : "False") << endl;
+    cout << "Task Name: " << getName() << endl
+         << "Description: " << getDesc() << endl
+         << "Goal: " << getGoal() << endl
+         << "Priority: " << getPriority() << endl
+         << "Classification: " << getClass() << endl
+         << "Due on: " << getDue() << endl
+         << "Goal: " << getGoal() << endl
+         << "Complete: " << (getComp() ? "True" : "False") << endl;
 }
 void Personal::setGoal(string g){
-goal = g;
+    goal = g;
 }
 string Personal::getGoal(){
-return goal;
+    return goal;
 }
 
