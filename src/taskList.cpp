@@ -1,7 +1,7 @@
-#include "task.h"
-#include "work.h"
-#include "study.h"
-#include "personal.h"
+#include "../header/task.h"
+#include "../header/work.h"
+#include "../header/study.h"
+#include "../header/personal.h"
 #include <iostream>
 #include <vector>
 

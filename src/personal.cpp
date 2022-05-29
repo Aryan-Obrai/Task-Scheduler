@@ -1,4 +1,4 @@
-#include "personal.h"
+#include "../header/personal.h"
 
 using namespace std
 

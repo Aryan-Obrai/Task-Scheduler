@@ -1,4 +1,4 @@
-#include "study.h"
+#include "../header/study.h"
 
 using namespace std;
 Study::Study(){

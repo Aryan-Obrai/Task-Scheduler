@@ -1,5 +1,5 @@
-#include "task.h"
-#include "work.h"
+#include "../header/task.h"
+#include "../header/work.h"
 #include <iostream>
 
 using namespace std;
