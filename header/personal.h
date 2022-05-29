@@ -10,12 +10,13 @@ class Personal: public Task  {
       string classification = "Personal";
       string goal;
    public:
-      Personal()
+      Personal();
+      Personal::Personal(string name, string desc, int prio, string dueDate, string dueClock, string goal) 
+        : Task(name, desc, prio, dueDate, dueClock) {};
       void printTask();
       void setGoal(string );
       string getGoal();
 };
 
 #endif
-~
 
