@@ -18,7 +18,7 @@ cout << "Goal: " << getGoal() << endl;
 cout << "Priority: " << getPriority() << endl;
 cout << "Classification: " << getClass() << endl;
 cout << "Due on: " << getDue() << endl;
-cout << "Complete: " << (complete ? "True" : "False") << endl;
+cout << "Complete: " << (getComp() ? "True" : "False") << endl;
 }
 void Personal::setGoal(string g){
 goal = g;
