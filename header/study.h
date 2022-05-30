@@ -21,5 +21,5 @@ class Study: public Task  {
 };
 
 #endif
-~
+
 

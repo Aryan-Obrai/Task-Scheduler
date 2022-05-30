@@ -1,1 +1,0 @@
-/opt/rh/devtoolset-6/root/usr/bin/c++    -rdynamic CMakeFiles/main.dir/main.cpp.o CMakeFiles/main.dir/src/personal.cpp.o CMakeFiles/main.dir/src/scheduler.cpp.o CMakeFiles/main.dir/src/study.cpp.o CMakeFiles/main.dir/src/task.cpp.o CMakeFiles/main.dir/src/taskList.cpp.o CMakeFiles/main.dir/src/work.cpp.o  -o main 
