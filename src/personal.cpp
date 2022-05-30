@@ -4,9 +4,9 @@ using namespace std;
 
 Personal::Personal() {}
 
-Personal::Personal(string name, string desc, int prio, string dueDate, string dueClock, string goal) : Task(name, desc, prio, dueDate, dueClock) {
+/*Personal::Personal(string name, string desc, int prio, string dueDate, string dueClock, string goal) : Task(name, desc, prio, dueDate, dueClock) {
     this->goal = goal;
-}
+}*/
 
 void Personal::printTask(){
     cout << "Task Name: " << getName() << endl

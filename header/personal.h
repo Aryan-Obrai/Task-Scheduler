@@ -11,8 +11,8 @@ class Personal: public Task  {
       string goal;
    public:
       Personal();
-      Personal::Personal(string name, string desc, int prio, string dueDate, string dueClock, string goal) 
-        : Task(name, desc, prio, dueDate, dueClock) {};
+      Personal(string name, string desc, int prio, string dueDate, string dueClock, string goal) 
+        : Task(name, desc, prio, dueDate, dueClock) {this->goal = goal;};  
       void printTask();
       void setGoal(string );
       string getGoal();
