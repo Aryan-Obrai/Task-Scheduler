@@ -20,7 +20,7 @@ class Scheduler: public Task {
     void display();
     void addTask(Task* );
     void removeTask(Task* );
-    void sortTasks(char );
+    void sortTasks();
     void editDesc(Task* , string );
     void editDue(Task* , string , string );
     void editPrio(Task* , int );
