@@ -64,8 +64,8 @@ void Scheduler::removeTask(Task* task) {
 	}	
 }
 
-void Scheduler::sortTasks(char sortt) {
-	std::sort(fullList.begin(), fullList.end(), [](Task* l, Task* r) {
+void Scheduler::sortTasks() {
+	sort(fullList.begin(), fullList.end(), [](Task* l, Task* r) {
 		return l->getPriority() < r->getPriority();	
 	});
 }
@@ -107,3 +107,4 @@ void Scheduler::sort() {
 void Scheduler::undo() {
 	fullList.pop_back();
 }
+
