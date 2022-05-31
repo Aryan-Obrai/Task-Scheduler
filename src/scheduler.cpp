@@ -56,36 +56,36 @@ void Scheduler::addTask(Task* task) {
 
 void Scheduler::removeTask(Task* task) {
 	for(int i = 0; i < fullList.size(); i++){
-		if(task.getName() == fullList.at(i).getName()){
+		if(task->getName() == fullList.at(i).getName()){
 			fullList.erase(i);
 		}
 	}	
 }
 
-void Scheduler::sortTasks(char sort) {
+void Scheduler::sortTasks(char sortt) {
 	sort(fullList.begin(), fullList.end(), [](Task* l, Task* r) {
 		return l->getPriority() < r->getPriority();	
 	});
 }
 
 void Scheduler::editDesc(Task* task, string newDesc) {
-    task.setDesc(newDesc);
+    task->setDesc(newDesc);
 }
 
 void Scheduler::editDue(Task* task, string newDate, string newTime) {
-    task.setDue(newDate + ", " + newTime);
+    task->setDue(newDate + ", " + newTime);
 }
 
 void Scheduler::editPrio(Task* task, int newPrio) {
-    task.setPrio(newPrio);
+    task->setPriority(newPrio);
 }
 
 void Scheduler::markComplete(Task* task) {
-    task.setComp();
+    task->setComp();
 }
 
 void Scheduler::markIncomplete(Task* task) {
-    task.setIncomp();
+    task->setIncomp();
 }
 
 void Scheduler::sort() {
