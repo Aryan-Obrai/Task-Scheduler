@@ -21,9 +21,9 @@ ADD_EXECUTABLE(test
     ./src/task.cpp
     ./src/taskList.cpp
     ./src/work.cpp
+    ./tests/taskList_test.cpp
     )
 
 
 TARGET_LINK_LIBRARIES(test gtest
-./tests/taskList_test.cpp
 )
