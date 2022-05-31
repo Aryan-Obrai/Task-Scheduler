@@ -74,7 +74,7 @@ void Scheduler::editDesc(Task* task, string newDesc) {
 }
 
 void Scheduler::editDue(Task* task, string newDate, string newTime) {
-    task->setDue(newDate + ", " + newTime);
+    task->setDue(newDate, newTime);
 }
 
 void Scheduler::editPrio(Task* task, int newPrio) {
