@@ -11,6 +11,8 @@ class Work: public Task  {
       string className;
       string workLink;
    public:
+      Work();
+      Work(string name, string desc, int prio, string dueDate, string dueClock, string className, string workLink);
       void printTask();
       void setClassName(string );
       string getClassName();

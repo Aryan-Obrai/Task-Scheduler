@@ -7,12 +7,11 @@ using namespace std;
 
 class Personal: public Task  {
    private:
-      string classification = "Personal";
-      string goal;
+     string classification = "Personal";
+     string goal;
    public:
       Personal();
-      Personal(string name, string desc, int prio, string dueDate, string dueClock, string goal) 
-        : Task(name, desc, prio, dueDate, dueClock) {this->goal = goal;};  
+      Personal(string name, string desc, int prio, string dueDate, string dueClock, string goal);
       void printTask();
       void setGoal(string );
       string getGoal();

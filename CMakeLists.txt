@@ -24,4 +24,6 @@ ADD_EXECUTABLE(test
     )
 
 
-TARGET_LINK_LIBRARIES(test gtest)
+TARGET_LINK_LIBRARIES(test gtest
+./tests/taskList_test.cpp
+)
