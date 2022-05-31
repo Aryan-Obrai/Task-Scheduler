@@ -3,13 +3,14 @@
 #include "../header/scheduler.h"
 #include <iostream>
 #include <string>
+#include <algorithm>
 #include <vector>
 
 using namespace std;
 
 Scheduler::Scheduler() {
     sortType = 'N';
-    vector<Task> fullList;
+    vector<Task*> fullList;
 }
 
 void Scheduler::display() {
@@ -18,14 +19,14 @@ void Scheduler::display() {
 
     if(sortType == 'N') {
         for (int i = 0; i < fullList.size(); i++) {
-            cout << i+1 << ". " << fullList.at(i).getName() << endl;
+            cout << i+1 << ". " << fullList.at(i)->getName() << endl;
         }
     }
     
     if(sortType == 'W') {
         for (int i = 0; i < fullList.size(); i++) {
-            if(fullList.at(i).getClass() == "Work") {
-                cout << cnt+1 << ". " << fullList.at(i).getName() << endl;
+            if(fullList.at(i)->getClass() == "Work") {
+                cout << cnt+1 << ". " << fullList.at(i)->getName() << endl;
                 cnt++;
             }
         }
@@ -33,8 +34,8 @@ void Scheduler::display() {
 
     if(sortType == 'S') {
         for (int i = 0; i < fullList.size(); i++) {
-            if(fullList.at(i).getClass() == "Study") {
-                cout << cnt+1 << ". " << fullList.at(i).getName() << endl;
+            if(fullList.at(i)->getClass() == "Study") {
+                cout << cnt+1 << ". " << fullList.at(i)->getName() << endl;
                 cnt++;
             }
         }
@@ -42,8 +43,8 @@ void Scheduler::display() {
 
     if(sortType == 'P') {
         for (int i = 0; i < fullList.size(); i++) {
-            if(fullList.at(i).getClass() == "Personal") {
-                cout << cnt+1 << ". " << fullList.at(i).getName() << endl;
+            if(fullList.at(i)->getClass() == "Personal") {
+                cout << cnt+1 << ". " << fullList.at(i)->getName() << endl;
                 cnt++;
             }
         }
@@ -57,8 +58,8 @@ void Scheduler::addTask(Task* task) {
 
 void Scheduler::removeTask(Task* task) {
 	for(int i = 0; i < fullList.size(); i++){
-		if(task->getName() == fullList.at(i).getName()){
-			fullList.erase(i);
+		if(task->getName() == fullList.at(i)->getName()){
+			delete fullList.at(i);
 		}
 	}	
 }
@@ -74,7 +75,7 @@ void Scheduler::editDesc(Task* task, string newDesc) {
 }
 
 void Scheduler::editDue(Task* task, string newDate, string newTime) {
-    task->setDue(newDate + ", " + newTime);
+    task->setDue(newDate , newTime);
 }
 
 void Scheduler::editPrio(Task* task, int newPrio) {

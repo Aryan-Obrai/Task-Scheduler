@@ -7,7 +7,7 @@
 using namespace std;
 
 class Task {
-   private:
+   protected:
       string taskName;
       string description;
       int priority;
