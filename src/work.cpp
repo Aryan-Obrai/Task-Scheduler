@@ -8,7 +8,7 @@ Work::Work() {
     description = "N/A";
     priority = 0;
     classification = "Work";
-    dueTime = "01-01-2000, 12:00 AM"
+    dueTime = "01-01-2000, 12:00 AM";
     complete = false;
 
     className = "N/A";
