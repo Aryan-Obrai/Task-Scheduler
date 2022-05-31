@@ -8,11 +8,13 @@
 
 using namespace std;
 
-class TaskList {
+class TaskList: public Task {
    private:
-      vector<Task> subTasks;
+      vector<Task*> subTasks;
       bool allComplete;
    public:
+      TaskList();
+      TaskList(string name, string desc, int prio, string dueDate, string dueClock, string className, string workLink);
       void printSubTasks();
       void setClass(Task* , string );
       void addSubTask(Task*);

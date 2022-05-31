@@ -8,7 +8,7 @@ Task::Task() {
     description = "N/A";
     priority = 0;
     classification = "N/A";
-    dueTime = "01-01-2000, 12:00 AM"
+    dueTime = "01-01-2000, 12:00 AM";
     complete = false;
 }
 
@@ -20,7 +20,7 @@ Task::Task(string name, string desc, int prio, string dueDate, string dueClock) 
     complete = false;
 }
 
-virtual void Task::printTask() {
+/*virtual void Task::printTask() {
     cout << "Name: " << getName() << endl
          << "Description: " << getDesc() << endl
          << "Priority: " << getPriority() << endl
@@ -28,15 +28,15 @@ virtual void Task::printTask() {
          << "Due on: " << getDue() << endl
          << "Complete: " << (complete ? "True" : "False") << endl;
 }
-
+*/
 void Task::setName(string name) {
     taskName = name;
 }
 
-void Task::push_back(Task* t) {
+/*void Task::push_back(Task* t) {
     (*t).push_back(Task());
     t->push_back(Task()):
-}
+}*/
 
 string Task::getName() {
     return taskName;
@@ -58,7 +58,7 @@ int Task::getPriority() {
     return priority;
 }
 
-int Task::getClass() {
+string Task::getClass() {
     return classification;
 }
 
@@ -66,7 +66,7 @@ void Task::setDue(string dueDate, string dueClock) {
     dueTime = dueDate + ", " + dueClock;
 }
 
-void Task::getDue() {
+string Task::getDue() {
     return dueTime;
 }
 
