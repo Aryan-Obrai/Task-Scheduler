@@ -12,9 +12,9 @@ TaskList::TaskList() {
     description = "N/A";
     priority = 0;
     classification = "N/A";
-    dueTime = "01-01-2000, 12:00 AM"
+    dueTime = "01-01-2000, 12:00 AM";
     complete = false;
-
+    vector<Task*> subTasks;
     allComplete = false;
 }
 
@@ -25,7 +25,7 @@ TaskList::TaskList(string name, string desc, int prio, string dueDate, string du
     classification = "List";
     dueTime = dueDate + ", " + dueClock;
     complete = false;
-
+    vector<Task*> subTasks;
     allComplete = false;
 }
 
@@ -38,9 +38,9 @@ void TaskList::printTask() {
 }
 
 void TaskList::printSubTasks(){
-for (int i = 0; i < subTasks.length; i++){
-cout << (i + 1) << " " << "." << subTasks[i] << subTasks[i] -> getName() << endl;
-
+for (int i = 0; i < subTasks.length(); i++){
+cout << (i + 1) << ". " << subTasks[i] -> getName() << endl;
+}
 }
 
 void TaskList::setClass(Task* oldTask, string clas ) {

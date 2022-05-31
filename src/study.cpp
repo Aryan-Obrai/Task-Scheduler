@@ -19,10 +19,10 @@ cout << "Due on: " << getDue() << endl;
 cout << "Complete: " << (complete ? "True" : "False") << endl;
 }
 void Study::addResources(string res ){
-resources.pushback(res);
+resources.push_back(res);
 }
 void Study::addNotes(string note ){
-notes.pushback(note);
+notes.push_back(note);
 }
 void Study::printResources(){
    cout << "Resources: " << endl;
