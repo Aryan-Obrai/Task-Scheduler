@@ -65,7 +65,7 @@ Task* createTask() {
         cin.ignore();
         cin >> nParam2;
 
-        Work* t = new Task(nName, nDesc, nPrio, nDate, nClock, nParam1, nParam2);
+        Study* t = new Task(nName, nDesc, nPrio, nDate, nClock, nParam1, nParam2);
         return t;
     }
 
@@ -74,8 +74,6 @@ Task* createTask() {
         cin.ignore();
         cin >> nParam1;
 
-        Work* t = new Task(nName, nDesc, nPrio, nDate, nClock, nParam1);
-        return t;
         Personal* t = new Task(nName, nDesc, nPrio, nDate, nClock);
         return t;
     }
