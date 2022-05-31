@@ -33,6 +33,11 @@ void Task::setName(string name) {
     taskName = name;
 }
 
+void Task::push_back(Task* t) {
+    (*t).push_back(Task());
+    t->push_back(Task()):
+}
+
 string Task::getName() {
     return taskName;
 }
