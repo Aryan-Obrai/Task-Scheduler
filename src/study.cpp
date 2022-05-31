@@ -6,10 +6,8 @@ Study::Study(){
     description = "N/A";
     priority = 0;
     classification = "Study";
-    dueTime = "01-01-2000, 12:00 AM"
+    dueTime = "01-01-2000, 12:00 AM";
     complete = false;
-
-    className = "N/A";
 }
 Study::Study(string name, string desc, int prio, string dueDate, string dueClock): Task(name, desc, prio, dueDate, dueClock){};
 void Study::printTask(){
