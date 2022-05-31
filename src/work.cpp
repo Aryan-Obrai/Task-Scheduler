@@ -15,14 +15,7 @@ Work::Work() {
     workLink = "https://link.com";
 }
 
-Work::Work(string name, string desc, int prio, string dueDate, string dueClock, string className, string workLink) {
-    taskName = name;
-    description = desc;
-    priority = prio;
-    classification = "Work";
-    dueTime = dueDate + ", " + dueClock;
-    complete = false;
-
+Work::Work(string name, string desc, int prio, string dueDate, string dueClock, string className, string workLink): Task(name, desc, prio, dueDate, dueClock) {
     this->className = className;
     this->workLink = workLink;
 }

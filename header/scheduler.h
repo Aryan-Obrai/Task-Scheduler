@@ -16,6 +16,7 @@ class Scheduler: public Task {
     char sortType;
     vector<Task> fullList;
   public:
+    Scheduler();
     void display();
     void addTask(Task* );
     void removeTask(Task* );
