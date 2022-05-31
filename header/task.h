@@ -18,7 +18,8 @@ class Task {
       Task();
       Task(string , string , int , string , string );
       virtual void printTask() = 0;
-      void setName(string );
+      void setName(string ); 
+      void push_back(Task*);
       string getName();
       void setDesc(string );
       string getDesc();

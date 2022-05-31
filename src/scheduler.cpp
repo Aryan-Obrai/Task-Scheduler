@@ -90,14 +90,14 @@ void Scheduler::markIncomplete(Task* task) {
 }
 
 void Scheduler::sort() {
-    char type = sort;
+    char type = sortType;
     cout << "Which type of tasks would you like to see first?" << endl
          << "Enter a character: W - Work, S - Study, P - Personal. Type Q to quit." << endl;
     cin >> type;
     if (type != ('W' || 'S' || 'P' || 'Q')) {
         cin >> type;
     } else {
-        if (type == Q) {
+        if (type == 'Q') {
             return;
         }
     }
