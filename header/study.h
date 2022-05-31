@@ -13,6 +13,7 @@ class Study: public Task  {
       vector<string> notes;
    public:
       Study();
+      Study(string name, string desc, int prio, string dueDate, string dueClock);
       void printTask();
       void printResources();
       void printNotes();
