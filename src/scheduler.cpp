@@ -3,6 +3,7 @@
 #include "../header/scheduler.h"
 #include <iostream>
 #include <string>
+#include <algorithm>
 #include <vector>
 
 using namespace std;
@@ -64,7 +65,7 @@ void Scheduler::removeTask(Task* task) {
 }
 
 void Scheduler::sortTasks(char sortt) {
-	sort(fullList.begin(), fullList.end(), [](Task* l, Task* r) {
+	std::sort(fullList.begin(), fullList.end(), [](Task* l, Task* r) {
 		return l->getPriority() < r->getPriority();	
 	});
 }
