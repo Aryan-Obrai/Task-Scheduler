@@ -1,3 +1,4 @@
+
 #include "../header/task.h"
 #include "../header/scheduler.h"
 #include <iostream>
@@ -7,7 +8,7 @@
 using namespace std;
 
 Scheduler::Scheduler() {
-    sortType = N;
+    sortType = 'N';
     vector<Task> fullList;
 }
 
@@ -15,13 +16,13 @@ void Scheduler::display() {
     int cnt;
     cout << "Tasks: " << endl;
 
-    if(sortType == N) {
+    if(sortType == 'N') {
         for (int i = 0; i < fullList.size(); i++) {
             cout << i+1 << ". " << fullList.at(i).getName() << endl;
         }
     }
     
-    if(sortType == W) {
+    if(sortType == 'W') {
         for (int i = 0; i < fullList.size(); i++) {
             if(fullList.at(i).getClass() == "Work") {
                 cout << cnt+1 << ". " << fullList.at(i).getName() << endl;
@@ -30,7 +31,7 @@ void Scheduler::display() {
         }
     }
 
-    if(sortType == S) {
+    if(sortType == 'S') {
         for (int i = 0; i < fullList.size(); i++) {
             if(fullList.at(i).getClass() == "Study") {
                 cout << cnt+1 << ". " << fullList.at(i).getName() << endl;
@@ -39,7 +40,7 @@ void Scheduler::display() {
         }
     }
 
-    if(sortType == P) {
+    if(sortType == 'P') {
         for (int i = 0; i < fullList.size(); i++) {
             if(fullList.at(i).getClass() == "Personal") {
                 cout << cnt+1 << ". " << fullList.at(i).getName() << endl;
@@ -93,7 +94,7 @@ void Scheduler::sort() {
     cout << "Which type of tasks would you like to see first?" << endl
          << "Enter a character: W - Work, S - Study, P - Personal. Type Q to quit." << endl;
     cin >> type;
-    if (type != (W || S || P || Q)) {
+    if (type != ('W' || 'S' || 'P' || 'Q')) {
         cin >> type;
     } else {
         if (type == Q) {
