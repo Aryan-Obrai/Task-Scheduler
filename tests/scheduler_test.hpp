@@ -1,6 +1,8 @@
 #include "gtest/gtest.h"
 #include "../header/scheduler.h"
-#include "../header/task.h"
+#include "../header/personal.h"
+#include "../header/work.h"
+#include "../header/study.h"
 
 TEST(create_scheduler, constructor){
 	Scheduler t;
