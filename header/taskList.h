@@ -15,6 +15,7 @@ class TaskList: public Task {
    public:
       TaskList();
       TaskList(string name, string desc, int prio, string dueDate, string dueClock, string className, string workLink);
+      void printTask();
       void printSubTasks();
       void setClass(Task* , string );
       void addSubTask(Task*);

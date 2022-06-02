@@ -61,7 +61,9 @@ int Task::getPriority() {
 string Task::getClass() {
     return classification;
 }
-
+void Task::setClass(string newClass){
+    classification = newClass;
+}
 void Task::setDue(string dueDate, string dueClock) {
     dueTime = dueDate + ", " + dueClock;
 }

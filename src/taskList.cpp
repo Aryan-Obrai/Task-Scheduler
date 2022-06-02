@@ -1,3 +1,4 @@
+#include "../header/taskList.h"
 #include "../header/task.h"
 #include "../header/work.h"
 #include "../header/study.h"
@@ -38,24 +39,24 @@ void TaskList::printTask() {
 }
 
 void TaskList::printSubTasks(){
-for (int i = 0; i < subTasks.length(); i++){
+for (int i = 0; i < subTasks.size(); i++){
 cout << (i + 1) << ". " << subTasks[i] -> getName() << endl;
 }
 }
 
 void TaskList::setClass(Task* oldTask, string clas ) {
-oldTask -> classification = clas;    
+oldTask->setClass(clas);    
 }
 
 void TaskList::addSubTask(Task* _Task) {
-    SubTasks.push_back(_Task);
+    subTasks.push_back(_Task);
 }
 
 void TaskList::deleteSubTask(Task* _Task) {
- for ( int i = 0, i < subTasks.length; i++){
+ for ( int i = 0; i < subTasks.size(); i++){
 	if (_Task == subTasks[i]){
 		delete _Task;
-	 subTask.erase(subTask.begin() + i);
+	 subTasks.erase(subTasks.begin() + i);
 	break;	
 	}
 }   
