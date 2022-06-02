@@ -1,5 +1,9 @@
 #include "gtest/gtest.h"
 #include "../header/taskList.h"
+#include "../header/personal.h"
+#include "../header/work.h"
+#include "../header/study.h"
+#include "../header/scheduler.h"
 
 TEST(complete, is_false) {
    taskList  testtaskList;
@@ -8,7 +12,7 @@ TEST(complete, is_false) {
 }
 
 TEST(complete, is_true) {
-   task testtaskList;
+   Task testtaskList;
 
    testtaskList.mark_as_complete();
 
@@ -16,25 +20,25 @@ TEST(complete, is_true) {
 }
 
 TEST(printTask, default_constructor) {
-   task testTask;
+   Task testTask;
 
    EXPECT_EQ(0, testtaskList.printTask());
 }
 
 TEST(printSubTasks, default_constructor) {
-   task testtaskLists;
+   Task testtaskLists;
 
    EXPECT_EQ(0, testtaskList.printSubTasks());
 }
 
 TEST(addSubTask, default_constructor) {
-   task testtaskLists;
+   Task testtaskLists;
 
    EXPECT_EQ(0, testtaskList.addSubTask());
 }
 
 TEST(deleteSubTask, default_constructor) {
-   task testtaskList;
+   Task testtaskList;
 
    EXPECT_EQ(0, testtaskList.deleteSubTask());
 }
