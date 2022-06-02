@@ -26,6 +26,7 @@ class Task {
       void setPriority(int );
       int getPriority();
       string getClass();
+      void setClass(string );
       void setDue(string , string );
       string getDue();
       void setComp();
