@@ -14,7 +14,7 @@ ADD_EXECUTABLE(main
     )
 
 ADD_EXECUTABLE(test
-    main.cpp 
+    ./testFiles/unit_test.cpp
     ./src/personal.cpp
     ./src/scheduler.cpp
     ./src/study.cpp
