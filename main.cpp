@@ -1,9 +1,9 @@
-#include "../header/task.h"
-#include "../header/scheduler.h"
-#include "../header/work.h"
-#include "../header/study.h"
-#include "../header/personal.h"
-#include "../header/taskList.h"
+#include "./header/task.h"
+#include "./header/scheduler.h"
+#include "./header/work.h"
+#include "./header/study.h"
+#include "./header/personal.h"
+#include "./header/taskList.h"
 #include <iostream>
 #include <string>
 #include <vector>

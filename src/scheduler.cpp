@@ -16,45 +16,53 @@ void Scheduler::printTask(){
 }
 
 void Scheduler::display() {
-    int cnt;
-    cout << "Tasks: " << endl;
+    int cnt = 0;
+    cout << "Tasks Display: " << endl << endl;
 
     if(sortType == 'N') {
         for (int i = 0; i < fullList.size(); i++) {
-            cout << "============================== Task " << cnt+1 << ". " << endl
-                 << fullList.at(i)->printTask() << endl;
+            cout << "=============== Task ===============" << cnt+1 << ". " << endl;
+            fullList.at(i)->printTask();
             cnt++;
+            cout << endl;
         }
+        cout << endl << endl;
     }
     
     if(sortType == 'W') {
         for (int i = 0; i < fullList.size(); i++) {
             if(fullList.at(i)->getClass() == "Work") {
-                cout << "============================== Task " << cnt+1 << ". " << endl
-                 << fullList.at(i)->printTask() << endl;
+                cout << "============================== Task " << cnt+1 << ". " << endl;
+                fullList.at(i)->printTask();
                 cnt++;
+                cout << endl;
             }
         }
+        cout << endl << endl;
     }
 
     if(sortType == 'S') {
         for (int i = 0; i < fullList.size(); i++) {
             if(fullList.at(i)->getClass() == "Study") {
-                cout << "============================== Task " << cnt+1 << ". " << endl
-                 << fullList.at(i)->printTask() << endl;
+                cout << "============================== Task " << cnt+1 << ". " << endl;
+                fullList.at(i)->printTask();
                 cnt++;
+                cout << endl;
             }
         }
+        cout << endl << endl;
     }
 
     if(sortType == 'P') {
         for (int i = 0; i < fullList.size(); i++) {
             if(fullList.at(i)->getClass() == "Personal") {
-                cout << "============================== Task " << cnt+1 << ". " << endl
-                 << fullList.at(i)->printTask() << endl;
+                cout << "============================== Task " << cnt+1 << ". " << endl;
+                fullList.at(i)->printTask();
                 cnt++;
+                cout << endl;
             }
         }
+        cout << endl << endl;
     }
 }
 

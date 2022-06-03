@@ -14,7 +14,7 @@ Personal::Personal() {
 
 Personal::Personal(string name, string desc, int prio, string dueDate, string dueClock, string goal) : Task(name, desc, prio, dueDate, dueClock) {
     this->goal = goal;
-    classification = "Study";
+    Task:: classification = "Study";
 }
 
 void Personal::printTask(){
