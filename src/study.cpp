@@ -12,7 +12,6 @@ Study::Study() {
 }
 
 Study::Study(string name, string desc, int prio, string dueDate, string dueClock): Task(name, desc, prio, dueDate, dueClock) {classification = "Study"};
-
 void Study::printTask(){
     cout << "Task Name: " << getName() << endl;
     cout << "Description: " << getDesc() << endl;

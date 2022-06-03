@@ -2,10 +2,19 @@
 
 using namespace std;
 
-Personal::Personal() {}
+Personal::Personal() {
+    taskName = "Untitled";
+    description = "N/A";
+    priority = 0;
+    classification = "Personal";
+    dueTime = "01-01-2000, 12:00 AM";
+    complete = false;
+    goal = "N/A";
+}
 
 Personal::Personal(string name, string desc, int prio, string dueDate, string dueClock, string goal) : Task(name, desc, prio, dueDate, dueClock) {
     this->goal = goal;
+    classification = "Study";
 }
 
 void Personal::printTask(){
