@@ -20,7 +20,6 @@ Personal::Personal(string name, string desc, int prio, string dueDate, string du
 void Personal::printTask(){
     cout << "Task Name: " << getName() << endl
          << "Description: " << getDesc() << endl
-         << "Goal: " << getGoal() << endl
          << "Priority: " << getPriority() << endl
          << "Classification: " << getClass() << endl
          << "Due on: " << getDue() << endl

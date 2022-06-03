@@ -23,11 +23,12 @@ Work::Work(string name, string desc, int prio, string dueDate, string dueClock, 
 
 void Work::printTask() {
     cout << "Name: " << getName() << endl
-         << "Class: " << getClassName() << endl
          << "Description: " << getDesc() << endl
          << "Priority: " << getPriority() << endl
          << "Classification: " << getClass() << endl
          << "Due on: " << getDue() << endl
+         << "Class Name: " << getClassName() << endl
+         << "Link to work: " << getLink() << endl
          << "Complete: " << (complete ? "True" : "False") << endl;
 }
 

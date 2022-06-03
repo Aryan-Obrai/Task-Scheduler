@@ -51,11 +51,11 @@ Task* createTask() {
 
     if(nType == 'W' || nType == 'w') {
         cout << "Enter the class name: " << endl;
-        cin >> nParam1;
+        getline(cin, nParam1);
 
         cout << "Enter the link for the assignment: " << endl;
         cin.ignore();
-        cin >> nParam2;
+        getline(cin, nParam2);
 
         Work* t = new Work(nName, nDesc, nPrio, nDate, nClock, nParam1, nParam2);
         return t;
@@ -68,8 +68,7 @@ Task* createTask() {
 
     if(nType == 'P' || nType == 'p') {
         cout << "Enter your goal: " << endl;
-        cin.ignore();
-        cin >> nParam1;
+        getline(cin, nParam1);
 
         Personal* t = new Personal(nName, nDesc, nPrio, nDate, nClock, nParam1);
         return t;
