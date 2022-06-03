@@ -27,7 +27,7 @@ TEST(add_task, adding){
 TEST(edit_task_description, editDescrip){
 	Scheduler testS;
 	Task* t = new Work();
-	testS.addTask(t);
+	testS->addTask(t);
 	EXPECT_EQ("testD",testS.editDesc(t, "testD"));
 } 
 
