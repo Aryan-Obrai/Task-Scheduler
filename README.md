@@ -35,8 +35,6 @@ The UML diagram shown above explains the working flow of the current project. Th
 
 4. Adding new tasks
 
-![image](https://user-images.githubusercontent.com/88170160/171795521-853363c6-1de4-4f15-b193-e15f296d6023.png)
-
 ![image](https://user-images.githubusercontent.com/88170160/171795664-f7e94f45-518f-4a8a-b09a-5eb4f3450e43.png)
 
 ![image](https://user-images.githubusercontent.com/88170160/171795701-980b37f0-98f2-4fab-88a7-243722d035d3.png)
