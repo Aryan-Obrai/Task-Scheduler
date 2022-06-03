@@ -17,6 +17,7 @@ class Scheduler: public Task {
   public:
     vector<Task*> fullList;
     Scheduler();
+    ~Scheduler();
     void display();
     void printTask();
     void addTask(Task* );
