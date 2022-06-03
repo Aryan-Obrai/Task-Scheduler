@@ -6,9 +6,21 @@ ADD_SUBDIRECTORY(googletest)
 
 ADD_EXECUTABLE(main
     main.cpp
+    ./src/personal.cpp
+    ./src/scheduler.cpp
+    ./src/study.cpp
+    ./src/task.cpp
+    ./src/taskList.cpp
+    ./src/work.cpp
     )
 
 ADD_EXECUTABLE(test 
+    ./src/personal.cpp
+    ./src/scheduler.cpp
+    ./src/study.cpp
+    ./src/task.cpp
+    ./src/taskList.cpp
+    ./src/work.cpp
     ./tests/unit_test.cpp
     )
 

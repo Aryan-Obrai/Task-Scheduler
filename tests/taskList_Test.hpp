@@ -6,39 +6,39 @@
 #include "../header/scheduler.h"
 
 TEST(complete, is_false) {
-   taskList  testtaskList;
+   TaskList  testtaskList;
 
-   EXPECT_FALSE(testtaskList.complete());
+   EXPECT_FALSE(testtaskList.getComp());
 }
 
 TEST(complete, is_true) {
-   Task testtaskList;
+   TaskList testtaskList;
 
-   testtaskList.mark_as_complete();
+   testtaskList.setComp();
 
-   EXPECT_TRUE(testtaskList.complete());
+   EXPECT_TRUE(testtaskList.getComp());
 }
 
 TEST(printTask, default_constructor) {
-   Task testTask;
+   TaskList testTaskList;
 
    EXPECT_EQ(0, testtaskList.printTask());
 }
 
 TEST(printSubTasks, default_constructor) {
-   Task testtaskLists;
+   TaskList testtaskList;
 
    EXPECT_EQ(0, testtaskList.printSubTasks());
 }
 
 TEST(addSubTask, default_constructor) {
-   Task testtaskLists;
+   TaskList testtaskList;
 
    EXPECT_EQ(0, testtaskList.addSubTask());
 }
 
 TEST(deleteSubTask, default_constructor) {
-   Task testtaskList;
+   TaskList testtaskList;
 
    EXPECT_EQ(0, testtaskList.deleteSubTask());
 }
