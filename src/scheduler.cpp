@@ -1,4 +1,3 @@
-
 #include "../header/task.h"
 #include "../header/scheduler.h"
 #include <iostream>
@@ -22,14 +21,17 @@ void Scheduler::display() {
 
     if(sortType == 'N') {
         for (int i = 0; i < fullList.size(); i++) {
-            cout << i+1 << ". " << fullList.at(i)->getName() << endl;
+            cout << "============================== Task " << cnt+1 << ". " << endl
+                 << fullList.at(i)->printTask() << endl;
+            cnt++;
         }
     }
     
     if(sortType == 'W') {
         for (int i = 0; i < fullList.size(); i++) {
             if(fullList.at(i)->getClass() == "Work") {
-                cout << cnt+1 << ". " << fullList.at(i)->getName() << endl;
+                cout << "============================== Task " << cnt+1 << ". " << endl
+                 << fullList.at(i)->printTask() << endl;
                 cnt++;
             }
         }
@@ -38,7 +40,8 @@ void Scheduler::display() {
     if(sortType == 'S') {
         for (int i = 0; i < fullList.size(); i++) {
             if(fullList.at(i)->getClass() == "Study") {
-                cout << cnt+1 << ". " << fullList.at(i)->getName() << endl;
+                cout << "============================== Task " << cnt+1 << ". " << endl
+                 << fullList.at(i)->printTask() << endl;
                 cnt++;
             }
         }
@@ -47,7 +50,8 @@ void Scheduler::display() {
     if(sortType == 'P') {
         for (int i = 0; i < fullList.size(); i++) {
             if(fullList.at(i)->getClass() == "Personal") {
-                cout << cnt+1 << ". " << fullList.at(i)->getName() << endl;
+                cout << "============================== Task " << cnt+1 << ". " << endl
+                 << fullList.at(i)->printTask() << endl;
                 cnt++;
             }
         }
@@ -80,7 +84,7 @@ void Scheduler::editDesc(Task* task, string newDesc) {
 		return;
         	}
 	}
-cout << "Task not found" << endl;
+    cout << "Task not found" << endl;
 }
 
 void Scheduler::editDue(Task* task, string newDate, string newTime) {
@@ -90,8 +94,9 @@ void Scheduler::editDue(Task* task, string newDate, string newTime) {
                         return;
                }
 	}
-cout << "Task not found" << endl;
+    cout << "Task not found" << endl;
 }
+
 void Scheduler::editPrio(Task* task, int newPrio) {
 	for(int i = 0; i < fullList.size(); i++){
                 if(fullList.at(i) == task){
@@ -99,8 +104,9 @@ void Scheduler::editPrio(Task* task, int newPrio) {
                         return;
                }
 	}
-cout << "Task not found" << endl;
+    cout << "Task not found" << endl;
 }
+
 void Scheduler::markComplete(Task* task) {
 	for(int i = 0; i < fullList.size(); i++){
                 if(fullList.at(i) == task){
@@ -118,8 +124,9 @@ void Scheduler::markIncomplete(Task* task) {
                         return;
                }
 	}
-cout << "Task not found" << endl;
+    cout << "Task not found" << endl;
 }
+
 void Scheduler::sort() {
     char type = sortType;
     cout << "Which type of tasks would you like to see first?" << endl

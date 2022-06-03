@@ -14,7 +14,7 @@ ADD_EXECUTABLE(TaskScheduler
     )
 
 ADD_EXECUTABLE(tests
-    main.cpp 
+    ./testFiles/unit_test.cpp
     ./src/personal.cpp
     ./src/scheduler.cpp
     ./src/study.cpp

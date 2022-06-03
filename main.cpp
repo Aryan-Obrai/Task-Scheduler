@@ -1,8 +1,9 @@
-#include "./header/scheduler.h"
-#include "./header/work.h"
-#include "./header/study.h"
-#include "./header/personal.h"
-#include "./header/taskList.h"
+#include "../header/task.h"
+#include "../header/scheduler.h"
+#include "../header/work.h"
+#include "../header/study.h"
+#include "../header/personal.h"
+#include "../header/taskList.h"
 #include <iostream>
 #include <string>
 #include <vector>
@@ -17,9 +18,8 @@ Task* createTask() {
     cout << "What type of task would you like to register?" << endl
          << "W - Work, S - Study, P - Personal" << endl;
     cin >> nType;
-    cin.ignore();
 
-    if(nType != 'W' || nType != 'S' || nType != 'P' || nType != 'w' || nType != 's' || nType != 'p') {
+    if (nType != 'W' || nType != 'S' || nType != 'P' || nType != 'w' || nType != 's' || nType != 'p') {
         cout << "Please choose W, S, or P." << endl;
         cin >> nType;
     }
@@ -179,5 +179,4 @@ int main(int argc, char* argv[]) {
                 break;
             }
         }
-        cout << endl << endl;
     }
