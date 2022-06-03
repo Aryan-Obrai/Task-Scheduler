@@ -4,6 +4,7 @@
 #include <string>
 #include <algorithm>
 #include <vector>
+#include <cctype>
 
 using namespace std;
 
@@ -26,7 +27,7 @@ void Scheduler::display() {
 
     if(sortType == 'N') {
         for (int i = 0; i < fullList.size(); i++) {
-            cout << "=============== Task ===============" << cnt+1 << ". " << endl;
+            cout << "=============== Task " << cnt+1 << ". ===============" << endl;
             fullList.at(i)->printTask();
             cnt++;
             cout << endl;
@@ -37,7 +38,7 @@ void Scheduler::display() {
     if(sortType == 'W') {
         for (int i = 0; i < fullList.size(); i++) {
             if(fullList.at(i)->getClass() == "Work") {
-                cout << "============================== Task " << cnt+1 << ". " << endl;
+                cout << "=============== Task " << cnt+1 << ". ===============" << endl;
                 fullList.at(i)->printTask();
                 cnt++;
                 cout << endl;
@@ -49,7 +50,7 @@ void Scheduler::display() {
     if(sortType == 'S') {
         for (int i = 0; i < fullList.size(); i++) {
             if(fullList.at(i)->getClass() == "Study") {
-                cout << "============================== Task " << cnt+1 << ". " << endl;
+                cout << "=============== Task " << cnt+1 << ". ===============" << endl;
                 fullList.at(i)->printTask();
                 cnt++;
                 cout << endl;
@@ -61,7 +62,7 @@ void Scheduler::display() {
     if(sortType == 'P') {
         for (int i = 0; i < fullList.size(); i++) {
             if(fullList.at(i)->getClass() == "Personal") {
-                cout << "============================== Task " << cnt+1 << ". " << endl;
+                cout << "=============== Task " << cnt+1 << ". ===============" << endl;
                 fullList.at(i)->printTask();
                 cnt++;
                 cout << endl;
@@ -79,7 +80,6 @@ void Scheduler::addTask(Task* task) {
 void Scheduler::removeTask(Task* task) {
 	for(int i = 0; i < fullList.size(); i++){
 		if(fullList.at(i) == task){
-			delete fullList.at(i);
 			fullList.erase(fullList.begin()+i);
 		}
 	}	
@@ -143,16 +143,23 @@ void Scheduler::markIncomplete(Task* task) {
 
 void Scheduler::sort() {
     char type = sortType;
-    cout << "Which type of tasks would you like to see first?" << endl
-         << "Enter a character: W - Work, S - Study, P - Personal. Type Q to quit." << endl;
-    cin >> type;
-    if (type != ('W' || 'S' || 'P' || 'Q')) {
-        cin >> type;
-    } else {
-        if (type == 'Q') {
-            return;
-        }
+    string in;
+    cout << "Type which type of classification you would like to only see." << endl
+         << "Enter a character: N - Any, W - Work, S - Study, P - Personal. Type Q to quit." << endl;
+    cin >> in;
+    type = in[0];
+
+    while(type != ('N' && 'n' && 'W' && 'w' && 'S' && 's' && 'P' && 'p' && 'Q' && 'q')) {
+        cin >> in;
+        type = in[0];
     }
+
+    if (type == 'Q') {
+        return;
+    }
+
+
+    sortType = toupper(type);
 }
 
 void Scheduler::undo() {

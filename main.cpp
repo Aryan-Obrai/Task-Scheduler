@@ -11,17 +11,19 @@
 using namespace std;
 
 Task* createTask() {
-    char nType;
+    char nType = 'N';
     string nName, nDesc, nClass, nDate, nClock, nParam1, nParam2; //new Params for creating new/differnt tasks
     int nChoice, nPrio;
 
     cout << "What type of task would you like to register?" << endl
          << "W - Work, S - Study, P - Personal" << endl;
-    cin >> nType;
+    cin >> nParam1;
+    nType = nParam1[0];
 
-    if (nType != 'W' || nType != 'S' || nType != 'P' || nType != 'w' || nType != 's' || nType != 'p') {
+    while ((nType != 'W') && (nType != 'S') && (nType != 'P') && (nType != 'w') && (nType != 's') && (nType != 'p')) {
         cout << "Please choose W, S, or P." << endl;
-        cin >> nType;
+        cin >> nParam1;
+        nType = nParam1[0];
     }
 
     cout << "Enter the name of the task: " << endl;
@@ -39,7 +41,6 @@ Task* createTask() {
     getline(cin, nDate);
 
     cout << "Enter the time the task should be complete: " << endl;
-    cin.ignore();
     getline(cin, nClock);
 
 
@@ -50,7 +51,6 @@ Task* createTask() {
 
     if(nType == 'W' || nType == 'w') {
         cout << "Enter the class name: " << endl;
-        cin.ignore();
         cin >> nParam1;
 
         cout << "Enter the link for the assignment: " << endl;
@@ -85,11 +85,11 @@ int main(int argc, char* argv[]) {
     s.addTask(createTask());
 
     while(true) {
-        cout << "1. Display tasks" << endl
-         << "2. Sort tasks" << endl
-         << "3. Add Task" << endl
-         << "4. Edit Task" << endl
-         << "5. Quit" << endl;
+        cout << endl <<"1. Display tasks" << endl
+         << "2. Change display" << endl
+         << "3. Add task" << endl
+         << "4. Edit task" << endl
+         << "5. Quit" << endl << endl;
 
         cin >> choice;
 
@@ -108,9 +108,9 @@ int main(int argc, char* argv[]) {
         if (choice == '4') {
             string tString;
             int tInt;
-            Task* tmp;
+            Task* tmp = new Work();
 
-            cout << "Enter the name of the Task: " << endl;
+            cout << "Enter the name of the task: " << endl;
             cin >> tString;
 
             for(int i = 0; i < s.fullList.size(); ++i) {
@@ -119,13 +119,23 @@ int main(int argc, char* argv[]) {
                 }
             }
 
-            cout << "1. Edit Description" << endl
-            << "2. Edit Due Date" << endl
-            << "3. Edit Priority" << endl
+            while(tString != tmp->getName()) {
+                cout << "Task not found. Enter the name of the task:" << endl;
+                cin >> tString;
+
+                for(int i = 0; i < s.fullList.size(); ++i) {
+                    if(tString == s.fullList.at(i)->getName()) {
+                        tmp = s.fullList.at(i);
+                    }
+                }
+            }
+
+            cout << "1. Edit description" << endl
+            << "2. Edit due date" << endl
+            << "3. Edit priority" << endl
             << "4. Mark complete" << endl
             << "5. Mark incomplete" << endl
-            << "6. Delete Task" << endl
-            << "7. Undo" << endl;
+            << "6. Delete task" << endl << endl;
 
             cin >> choice;
 
@@ -167,12 +177,8 @@ int main(int argc, char* argv[]) {
             }
             
             if (choice == '6') {
-                /*complete later when implemented */
+                s.removeTask(tmp);
             }
-                
-            if (choice == '7') {
-                s.undo();
-                }
             }
 
             if (choice == '5') {
