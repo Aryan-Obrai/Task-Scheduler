@@ -4,3 +4,5 @@ CMakeFiles/
 lib/
 cmake_install.cmake
 googletest/
+tests
+TaskScheduler
