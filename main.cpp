@@ -54,7 +54,6 @@ Task* createTask() {
         getline(cin, nParam1);
 
         cout << "Enter the link for the assignment: " << endl;
-        cin.ignore();
         getline(cin, nParam2);
 
         Work* t = new Work(nName, nDesc, nPrio, nDate, nClock, nParam1, nParam2);
