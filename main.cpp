@@ -15,8 +15,13 @@ Task* createTask() {
     int nChoice, nPrio;
 
     cout << "What type of task would you like to register?" << endl
-         << "N - None, W - Work, S - Study, P - Personal" << endl;
+         << "W - Work, S - Study, P - Personal" << endl;
     cin >> nType;
+
+    if(nType != 'W' || nType != 'S' || nType != 'P' || nType != 'w' || nType != 's' || nType != 'p') {
+        cout << "Please choose W, S, or P." << endl;
+        cin >> nType;
+    }
 
     cout << "Enter the name of the task: " << endl;
     cin >> nName;
@@ -37,10 +42,10 @@ Task* createTask() {
     getline(cin, nClock);
 
 
-    if(nType == 'N' || nType == 'n') {
-        Task* t = new Task(nName, nDesc, nPrio, nDate, nClock);
-        return t;
-    }
+    /*if(nType == 'N' || nType == 'n') {
+ *         Task* t = new Task(nName, nDesc, nPrio, nDate, nClock);
+ *                 return t;
+ *                     } */
 
     if(nType == 'W' || nType == 'w') {
         cout << "Enter the class name: " << endl;
@@ -51,20 +56,12 @@ Task* createTask() {
         cin.ignore();
         cin >> nParam2;
 
-        Work* t = new Task(nName, nDesc, nPrio, nDate, nClock, nParam1, nParam2);
+        Work* t = new Work(nName, nDesc, nPrio, nDate, nClock, nParam1, nParam2);
         return t;
     }
 
     if(nType == 'S' || nType == 's') {
-        cout << "Add a resource for studying: " << endl;
-        cin.ignore();
-        cin >> nParam1;
-
-        cout << "Add a note: " << endl;
-        cin.ignore();
-        cin >> nParam2;
-
-        Study* t = new Task(nName, nDesc, nPrio, nDate, nClock, nParam1, nParam2);
+        Study* t = new Study(nName, nDesc, nPrio, nDate, nClock);
         return t;
     }
 
@@ -73,7 +70,7 @@ Task* createTask() {
         cin.ignore();
         cin >> nParam1;
 
-        Personal* t = new Task(nName, nDesc, nPrio, nDate, nClock);
+        Personal* t = new Personal(nName, nDesc, nPrio, nDate, nClock, nParam1);
         return t;
     }
 }
@@ -83,8 +80,8 @@ int main(int argc, char* argv[]) {
 
     char choice;
 
-    cout << "Enter your first task: " << endl
-    CreateTask();
+    cout << "Enter your first task: " << endl;
+    createTask();
 
     while(true) {
         cout << "1. Display tasks" << endl
@@ -114,10 +111,10 @@ int main(int argc, char* argv[]) {
             Task* tmp;
 
             cout << "Enter the name of the Task: " << endl;
-            cin >> tName;
+            cin >> tString;
 
             for(int i = 0; i < s.fullList.size(); ++i) {
-                if(tString == s.fullList.at(i)) {
+                if(tString == s.fullList.at(i)->getName()) {
                     tmp = s.fullList.at(i);
                 }
             }
@@ -170,7 +167,7 @@ int main(int argc, char* argv[]) {
             }
             
             if (choice == '6') {
-                //complete later when implemented
+                /*complete later when implemented */
             }
                 
             if (choice == '7') {
@@ -179,7 +176,6 @@ int main(int argc, char* argv[]) {
             }
 
             if (choice == '5') {
-                delete tmp;
                 break;
             }
         }

@@ -14,8 +14,8 @@ using namespace std;
 class Scheduler: public Task {
   private:
     char sortType;
-    vector<Task*> fullList;
   public:
+    vector<Task*> fullList;
     Scheduler();
     void display();
     void printTask();
