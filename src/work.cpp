@@ -18,6 +18,7 @@ Work::Work() {
 Work::Work(string name, string desc, int prio, string dueDate, string dueClock, string className, string workLink): Task(name, desc, prio, dueDate, dueClock) {
     this->className = className;
     this->workLink = workLink;
+    classification = "Work";
 }
 
 void Work::printTask() {

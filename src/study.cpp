@@ -9,7 +9,9 @@ Study::Study(){
     dueTime = "01-01-2000, 12:00 AM";
     complete = false;
 }
-Study::Study(string name, string desc, int prio, string dueDate, string dueClock): Task(name, desc, prio, dueDate, dueClock){};
+Study::Study(string name, string desc, int prio, string dueDate, string dueClock): Task(name, desc, prio, dueDate, dueClock){
+classification = "Study";
+};
 void Study::printTask(){
 cout << "Task Name: " << getName() << endl;
 cout << "Description: " << getDesc() << endl;
