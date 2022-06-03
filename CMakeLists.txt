@@ -13,14 +13,14 @@ ADD_EXECUTABLE(main
     ./src/work.cpp
     )
 
-ADD_EXECUTABLE(test 
+ADD_EXECUTABLE(test
+    main.cpp 
     ./src/personal.cpp
     ./src/scheduler.cpp
     ./src/study.cpp
     ./src/task.cpp
     ./src/taskList.cpp
     ./src/work.cpp
-    ./tests/unit_test.cpp
     )
 
 
