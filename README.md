@@ -11,20 +11,32 @@ For this group project we will be making a task scheduler.
 The reason we chose to create this for our project is because as college students, time management is one of the key skills to have to succeed in college. You need to be able to see the week ahead and see what assignments are due on what dates and sometimes it takes a lot of planning to do well in a lot of courses. We plan on using C++ as our primary coding language and we haven't yet decided what outside technologies will be implemented or utilized. Our project will be able to create tasks that have a title, description, classification, priority, duration, and due date. It will also be able to create and manage task lists with more than one task. The task lists will also be able to represent larger tasks which have substacked included. The user will be able to do or undo any of these operations and utilize any of these features with some of them being optional as well.
 
 ## Class Diagram
-![Task UML Diagram](https://user-images.githubusercontent.com/88170160/168523234-18098a98-1ec7-4126-9ac1-1c6b6edc0c4d.png)
+![Task UML Diagram - Page 1](https://user-images.githubusercontent.com/88170160/171793374-f970e7d6-385e-4cb7-8799-19b8be707ef0.png)
 
 The UML diagram shown above explains the working flow of the current project. The design pattern here that was implemented allows for the control the creation of the types of tasks such as Task, TaskList, Work, Study, Personal, and the Scheduler. Implementing a Composite design pattern here allowed for different types of display depending on what calls the function. The way a Composite pattern is solved is through a common interface which declares a method. Task Creation will be helped out by the Task class which includes task specific variables such as priority, name, and due time. The Study class is a subclass of the class Task. With the variables classification, resources, and notes. The Work class is another subclass with variables className and workLink. Finally the Personal class contains the variable, goal. All of these subclasses of Task allow making specific tasks exclusive to their subclass.
-
- > ## Final deliverable
- > All group members will give a demo to the TA/reader during lab time. The TA/reader will check the demo and the project GitHub repository and ask a few questions to all the team members. 
- > Before the demo, you should do the following:
- > * Complete the sections below (i.e. Screenshots, Installation/Usage, Testing)
- > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Project board.
- > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
  
  ## Screenshots
- > Screenshots of the input/output after running your application
+1. When running the program for the first time, it prompts for you to make a task:
+
+![image](https://user-images.githubusercontent.com/88170160/171793471-1bd40924-4890-4631-9011-40a80a6a92dc.png)
+
+2. Option menu
+
+![image](https://user-images.githubusercontent.com/88170160/171794691-1714f956-30ec-4bab-b4d7-014ac9dd18c8.png)
+
+3. Displaying tasks
+
+![image](https://user-images.githubusercontent.com/88170160/171793552-5852816e-872d-42cf-8f90-2355a756a0c7.png)
+
+3. Option to change which classification of task is being displayed
+
+![image](https://user-images.githubusercontent.com/88170160/171793601-7fc89712-e021-4990-8072-f6f13c92e5c2.png)
+
+4. Changing properties of tasks
+
+5. Deleting a task
+
  ## Installation/Usage
- > Instructions on installing and running your application
+To run the program, clone the repository and then run ```cmake3 .``` and ```make```. To run the program, use ```./TaskScheduler```.
  ## Testing
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
+Our project was tested using multiple googletests for each class, and by CI.
