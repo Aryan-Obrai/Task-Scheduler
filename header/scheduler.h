@@ -18,6 +18,7 @@ class Scheduler: public Task {
   public:
     Scheduler();
     void display();
+    void printTask();
     void addTask(Task* );
     void removeTask(Task* );
     void sortTasks();

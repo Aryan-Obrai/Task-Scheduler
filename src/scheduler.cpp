@@ -12,6 +12,9 @@ Scheduler::Scheduler() {
     sortType = 'N';
     vector<Task*> fullList;
 }
+void Scheduler::printTask(){
+   cout << fullList.at(0)->getName();
+}
 
 void Scheduler::display() {
     int cnt;
@@ -58,7 +61,7 @@ void Scheduler::addTask(Task* task) {
 
 void Scheduler::removeTask(Task* task) {
 	for(int i = 0; i < fullList.size(); i++){
-		if(task->getName() == fullList.at(i)->getName()){
+		if(fullList.at(i) == task){
 			delete fullList.at(i);
 		}
 	}	
@@ -71,25 +74,52 @@ void Scheduler::sortTasks() {
 }
 
 void Scheduler::editDesc(Task* task, string newDesc) {
-    task->setDesc(newDesc);
+	for(int i = 0; i < fullList.size(); i++){
+		if(fullList.at(i) == task){
+		fullList.at(i)->setDesc(newDesc);
+		return;
+        	}
+	}
+cout << "Task not found" << endl;
 }
 
 void Scheduler::editDue(Task* task, string newDate, string newTime) {
-    task->setDue(newDate , newTime);
+	for(int i = 0; i < fullList.size(); i++){
+                if(fullList.at(i) == task){
+                        fullList.at(i)->setDue(newDate, newTime);
+                        return;
+               }
+	}
+cout << "Task not found" << endl;
 }
-
 void Scheduler::editPrio(Task* task, int newPrio) {
-    task->setPriority(newPrio);
+	for(int i = 0; i < fullList.size(); i++){
+                if(fullList.at(i) == task){
+                        fullList.at(i)->setPriority(newPrio);
+                        return;
+               }
+	}
+cout << "Task not found" << endl;
 }
-
 void Scheduler::markComplete(Task* task) {
-    task->setComp();
+	for(int i = 0; i < fullList.size(); i++){
+                if(fullList.at(i) == task){
+                        fullList.at(i)->setComp();
+                        return;
+               }
+	}
+cout << "Task not found" << endl;
 }
 
 void Scheduler::markIncomplete(Task* task) {
-    task->setIncomp();
+	for(int i = 0; i < fullList.size(); i++){
+                if(fullList.at(i) == task){
+                        fullList.at(i)->setIncomp();
+                        return;
+               }
+	}
+cout << "Task not found" << endl;
 }
-
 void Scheduler::sort() {
     char type = sortType;
     cout << "Which type of tasks would you like to see first?" << endl
