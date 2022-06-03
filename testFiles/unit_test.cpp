@@ -3,6 +3,7 @@
 #include "personal_test.hpp"
 #include "study_test.hpp"
 #include "work_test.hpp"
+#include "scheduler_test.hpp"
 
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);
