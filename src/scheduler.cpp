@@ -75,6 +75,7 @@ void Scheduler::removeTask(Task* task) {
 	for(int i = 0; i < fullList.size(); i++){
 		if(fullList.at(i) == task){
 			delete fullList.at(i);
+			fullList.erase(fullList.begin()+i);
 		}
 	}	
 }
