@@ -14,6 +14,7 @@ class TaskList: public Task {
       bool allComplete;
    public:
       TaskList();
+      ~TaskList();
       TaskList(string name, string desc, int prio, string dueDate, string dueClock, string className, string workLink);
       void printTask();
       void printSubTasks();

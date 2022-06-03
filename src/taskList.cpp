@@ -18,7 +18,11 @@ TaskList::TaskList() {
     vector<Task*> subTasks;
     allComplete = false;
 }
-
+TaskList::~TaskList(){
+   for(int i = 0; i < subTasks.size(); i++){
+        delete subTasks.at(i);
+    }
+}
 TaskList::TaskList(string name, string desc, int prio, string dueDate, string dueClock, string className, string workLink) {
     taskName = name + " List";
     description = desc;

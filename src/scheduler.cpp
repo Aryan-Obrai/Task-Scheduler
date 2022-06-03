@@ -12,6 +12,11 @@ Scheduler::Scheduler() {
     sortType = 'N';
     vector<Task*> fullList;
 }
+Scheduler::~Scheduler(){
+    for(int i = 0; i < fullList.size(); i++){
+	delete fullList.at(i);
+    }
+}
 void Scheduler::printTask(){
    cout << fullList.at(0)->getName();
 }
