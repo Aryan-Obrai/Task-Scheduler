@@ -149,7 +149,8 @@ void Scheduler::sort() {
     cin >> in;
     type = in[0];
 
-    while(type != ('N' && 'n' && 'W' && 'w' && 'S' && 's' && 'P' && 'p' && 'Q' && 'q')) {
+    while((type != 'N') && (type != 'W') && (type != 'S') && (type != 'P') && (type != 'n') && (type != 'w') && (type != 's') && (type != 'p')) {
+        cout << "Enter a character: N - Any, W - Work, S - Study, P - Personal. Type Q to quit." << endl;
         cin >> in;
         type = in[0];
     }
