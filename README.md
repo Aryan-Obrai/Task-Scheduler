@@ -26,15 +26,36 @@ The UML diagram shown above explains the working flow of the current project. Th
 
 3. Displaying tasks
 
-![image](https://user-images.githubusercontent.com/88170160/171793552-5852816e-872d-42cf-8f90-2355a756a0c7.png)
+![image](https://user-images.githubusercontent.com/88170160/171796930-2982bf42-d093-4fdb-acae-1f0a232a1799.png)
+
 
 3. Option to change which classification of task is being displayed
 
 ![image](https://user-images.githubusercontent.com/88170160/171793601-7fc89712-e021-4990-8072-f6f13c92e5c2.png)
 
-4. Changing properties of tasks
+4. Adding new tasks
 
-5. Deleting a task
+![image](https://user-images.githubusercontent.com/88170160/171795521-853363c6-1de4-4f15-b193-e15f296d6023.png)
+
+![image](https://user-images.githubusercontent.com/88170160/171795664-f7e94f45-518f-4a8a-b09a-5eb4f3450e43.png)
+
+![image](https://user-images.githubusercontent.com/88170160/171795701-980b37f0-98f2-4fab-88a7-243722d035d3.png)
+
+6. Changing properties of tasks
+
+![image](https://user-images.githubusercontent.com/88170160/171795798-79a60f10-8caf-44be-a90e-c8b20a45d676.png)
+
+![image](https://user-images.githubusercontent.com/88170160/171795950-29732392-baf2-4b69-ae3d-2ad7360ce686.png)
+
+![image](https://user-images.githubusercontent.com/88170160/171797193-997d86e5-ea68-4549-9796-90e0eb71820c.png)
+
+
+6. Deleting a task
+
+![image](https://user-images.githubusercontent.com/88170160/171797259-b4a018bc-ee32-465a-bf54-47082c945ce5.png)
+
+![image](https://user-images.githubusercontent.com/88170160/171797347-2c682e18-c2fd-4aa9-b35b-46026971b41c.png)
+
 
  ## Installation/Usage
 To run the program, clone the repository and then run ```cmake3 .``` and ```make```. To run the program, use ```./TaskScheduler```.
