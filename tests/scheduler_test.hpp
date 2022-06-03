@@ -20,28 +20,28 @@ TEST(display_tasks, default_constructor) {
 
 TEST(add_task, adding){
 	Scheduler testS;
-	Task t = new Task();
+	Task* t = new Personal();
 	EXPECT_EQ(0, testS.addTask(t));
 }
 
 TEST(edit_task_description, editDescrip){
 	Scheduler testS;
-	Task* t = new Task();
+	Task* t = new Work();
 	testS.addTask(t);
 	EXPECT_EQ("testD",testS.editDesc(t, "testD"));
 } 
 
 TEST(edit_task_priority, editPrio){
         Scheduler testS;
-        Task* t = new Task();
+        Task* t = new Study();
         testS.addTask(t);
         EXPECT_EQ(1,testS.editDesc(t, 1));
 }  
 
 TEST(quick_undo, undoTest){
 	Scheduler testS;
-	Task* t = new Task();
-	Task* removeMe = new Task();
+	Task* t = new Work();
+	Task* removeMe = new Study();
 	testS.addTask(t);
 	testS.addTask(removeMe);
 	EXPECT_EQ(0, testS.undo();)
@@ -49,22 +49,22 @@ TEST(quick_undo, undoTest){
 
 TEST(marking_complete, markingTest){
 	Scheduler* testS;
-	Task* t = new Task();
+	Task* t = new Work();
 	testS.addTask(t);
 	EXPECT_TRUE(testS.markComplete(t));
 } 
 
 TEST(marking_incomplete, markingTest){
         Scheduler* testS;
-        Task* t = new Task();
+        Task* t = new Personal();
         testS.addTask(t);
         EXPECT_FALSE(testS.markIncomplete(t));
 }
 
 TEST(remove_task, removeTest){
 	Scheduler testS;
-        Task* t = new Task();
-        Task* e = new Task();
+        Task* t = new Personal();
+        Task* e = new Work();
         testS.addTask(t);
         testS.addTask(e);
         EXPECT_EQ(0, testS.removeTask(t));
@@ -72,10 +72,10 @@ TEST(remove_task, removeTest){
 
 TEST(sortTasks, sortAllTasks){
 	Scheduler* testS;
-	Task* t = new Task();
-        Task* e = new Task();
-	Task* a = new Task();
-        Task* b = new Task();
+	Task* t = new Personal();
+        Task* e = new Work();
+	Task* a = new Study();
+        Task* b = new Work();
 	testS.add(t);
 	testS.add(e);
 	testS.add(a);

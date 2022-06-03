@@ -65,7 +65,7 @@ void Scheduler::removeTask(Task* task) {
 }
 
 void Scheduler::sortTasks() {
-	sort(fullList.begin(), fullList.end(), [](Task* l, Task* r) {
+	std::sort(fullList.begin(), fullList.end(), [](Task* l, Task* r) {
 		return l->getPriority() < r->getPriority();	
 	});
 }
