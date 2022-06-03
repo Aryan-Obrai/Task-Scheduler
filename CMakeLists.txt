@@ -3,7 +3,7 @@ SET(CXX_STANDARD_REQUIRED 17)
 
 ADD_SUBDIRECTORY(googletest)
 
-ADD_EXECUTABLE(main
+ADD_EXECUTABLE(TaskScheduler
     main.cpp
     ./src/personal.cpp
     ./src/scheduler.cpp
@@ -13,7 +13,7 @@ ADD_EXECUTABLE(main
     ./src/work.cpp
     )
 
-ADD_EXECUTABLE(test
+ADD_EXECUTABLE(tests
     ./testFiles/unit_test.cpp
     ./src/personal.cpp
     ./src/scheduler.cpp
@@ -24,5 +24,5 @@ ADD_EXECUTABLE(test
     )
 
 
-TARGET_LINK_LIBRARIES(test gtest
+TARGET_LINK_LIBRARIES(tests gtest
 )

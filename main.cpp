@@ -1,3 +1,4 @@
+#include "./header/task.h"
 #include "./header/scheduler.h"
 #include "./header/work.h"
 #include "./header/study.h"
@@ -18,7 +19,7 @@ Task* createTask() {
          << "W - Work, S - Study, P - Personal" << endl;
     cin >> nType;
 
-    if(nType != 'W' || nType != 'S' || nType != 'P' || nType != 'w' || nType != 's' || nType != 'p') {
+    if (nType != 'W' || nType != 'S' || nType != 'P' || nType != 'w' || nType != 's' || nType != 'p') {
         cout << "Please choose W, S, or P." << endl;
         cin >> nType;
     }
@@ -81,7 +82,7 @@ int main(int argc, char* argv[]) {
     char choice;
 
     cout << "Enter your first task: " << endl;
-    createTask();
+    s.addTask(createTask());
 
     while(true) {
         cout << "1. Display tasks" << endl
@@ -98,7 +99,6 @@ int main(int argc, char* argv[]) {
 
         if (choice == '2') {
             s.sort();
-
         }
 
         if (choice == '3') {
